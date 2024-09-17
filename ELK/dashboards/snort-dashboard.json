@@ -1,1 +1,33 @@
+{
+  "title": "Snort Network Threats",
+  "panels": [
+    {
+      "type": "histogram",
+      "title": "Threat Alerts Over Time",
+      "data": {
+        "index": "snort-logs-*",
+        "query": {
+          "match_all": {}
+        }
+      },
+      "xaxis": {
+        "field": "@timestamp"
+      },
+      "yaxis": {
+        "field": "count"
+      }
+    },
+    {
+      "type": "table",
+      "title": "Recent Threats",
+      "data": {
+        "index": "snort-logs-*",
+        "query": {
+          "match_all": {}
+        }
+      },
+      "columns": ["@timestamp", "log_message"]
+    }
+  ]
+}
 
