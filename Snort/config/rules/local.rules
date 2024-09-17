@@ -1,1 +1,3 @@
+# Luật phát hiện lưu lượng HTTP GET request từ mạng LAN
+alert tcp $HOME_NET any -> $EXTERNAL_NET 80 (msg:"HTTP GET request detected"; sid:1000001; rev:1;)
 
