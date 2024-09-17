@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# Script cài đặt pfSense trên máy chủ
+# Script để cấu hình cài đặt tường lửa pfSense tự động
 
-# Download and install pfSense
-echo "Downloading pfSense..."
-wget -O /tmp/pfsense.iso https://example.com/pfsense-download
+# Set firewall rules
+echo "Setting up firewall rules..."
+pfctl -f /path/to/firewall-rules.conf
 
-# Tải xuống và cài đặt pfSense
-echo "Installing pfSense..."
-dd if=/tmp/pfsense.iso of=/dev/sda bs=4M
-sync
+# Thiết lập cấu hình NAT
+echo "Setting up NAT..."
+pfctl -N /path/to/nat-config.conf
 
-# Khởi động lại hệ thống
-reboot
+# Áp dụng các thay đổi
+echo "Reloading pfSense firewall..."
+pfctl -e
 
+echo "pfSense configuration completed."
