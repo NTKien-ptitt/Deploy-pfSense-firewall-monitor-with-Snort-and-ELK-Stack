@@ -1,1 +1,8 @@
+# mẫu log thu thập được từ snort
+
+[**] [1:1000001:1] HTTP GET request detected [**]
+[Priority: 2] {TCP} 192.168.1.10:12345 -> 198.51.100.1:80
+
+[**] [1:1000002:1] FTP login attempt detected [**]
+[Priority: 2] {TCP} 192.168.1.11:54321 -> 203.0.113.10:21
 
