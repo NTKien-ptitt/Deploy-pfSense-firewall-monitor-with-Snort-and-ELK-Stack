@@ -1,1 +1,13 @@
 
+# Cấu hình Elasticsearch
+
+cluster.name: snort-cluster
+node.name: snort-node-1
+network.host: 192.168.1.100
+http.port: 9200
+
+# Đường dẫn lưu trữ dữ liệu
+path.data: /var/lib/elasticsearch
+
+# Đường dẫn lưu trữ nhật ký
+path.logs: /var/log/elasticsearch
