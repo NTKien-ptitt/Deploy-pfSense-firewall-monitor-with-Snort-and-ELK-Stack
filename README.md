@@ -110,7 +110,7 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt/ stable main" | sudo tee
 sudo apt update
 sudo apt install elasticsearch
 ```
-Bước 3; Cấu hình Elasticsearch:
+Bước 3: Cấu hình Elasticsearch:
 - Mở tệp cấu hình:
 ```bash
 sudo nano /etc/elasticsearch/elasticsearch.yml
