@@ -228,9 +228,11 @@ sudo systemctl restart logstash
 ```
 ### Kiểm tra log trong Kibana
 - Sau khi hoàn tất, bạn có thể vào Kibana và kiểm tra các log được gửi từ Snort. Nếu bạn đã tạo một chỉ mục (index) cho snort-logs-*, log sẽ hiển thị và bạn có thể tạo các bảng điều khiển (dashboard) tùy chỉnh.
+
 Bước 1: Truy cập vào Kibana
 - Mở trình duyệt web và truy cập vào Kibana với địa chỉ `http://<IP_CUA_KIBANA>:5601` (thay <IP_CUA_KIBANA> bằng địa chỉ IP của máy chủ Kibana).
 - Đăng nhập nếu Kibana yêu cầu xác thực.
+  
 Bước 2: Tạo Index Pattern cho log Snort
 - Vào mục `Management`:
 - Tại menu bên trái, chọn `Stack Management` > `Kibana` > `Index Patterns`.
@@ -240,21 +242,26 @@ Bước 2: Tạo Index Pattern cho log Snort
 - Kibana sẽ tự động nhận diện các index phù hợp với tên pattern này.
 - Xác định trường thời gian:
 - Trong phần `Time field`, chọn trường thời gian chính xác nếu có (ví dụ: @timestamp), sau đó nhấn Create index pattern để hoàn tất.
+  
 Bước 3: Kiểm tra log Snort trong mục Discover
 - Vào mục `Discover`:
 - Chọn `Discover` từ menu bên trái.
 - Chọn `Index Pattern`:
 - Ở phần trên bên trái, chọn `index pattern snort-logs-*` để chỉ xem log Snort.
+  
 Bước 4: Kiểm tra dữ liệu log:
 - Kibana sẽ tải và hiển thị các log Snort mới nhất.
 - Bạn có thể sử dụng bộ lọc thời gian ở góc trên bên phải để chọn khoảng thời gian mong muốn (ví dụ: 15 phút qua, 24 giờ qua).
 ### Tạo Dashboard để trực quan hóa log Snort
 - Vào mục `Dashboard`.
 - Từ menu bên trái, chọn `Dashboard` và nhấn `Create dashboard`.
+  
 Bước 1: Thêm biểu đồ và bảng dữ liệu:
 - Nhấn `Add` và chọn `Visualizations` hoặc `Saved Searches` dựa trên dữ liệu từ `index snort-logs-*`.
 - Bạn có thể tạo biểu đồ dạng thanh, biểu đồ tròn, hoặc bảng để trực quan hóa các sự kiện như cảnh báo xâm nhập, thời gian xảy ra sự kiện, v.v.
+
 Bước 2: Lưu Dashboard:
 - Sau khi hoàn thành, nhấn `Save` để lưu lại `dashboard` cho lần xem tiếp theo.
+
 Bước 3: Theo dõi log Snort theo thời gian thực
 - Kibana cung cấp khả năng cập nhật dữ liệu theo thời gian thực trong Discover và Dashboard. Bạn có thể bật tính năng tự động làm mới bằng cách chọn tần suất cập nhật ở góc trên bên phải (ví dụ: 10 giây, 1 phút) để giám sát log một cách liên tục.
