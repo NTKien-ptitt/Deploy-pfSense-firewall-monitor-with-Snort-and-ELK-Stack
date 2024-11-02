@@ -3,27 +3,27 @@
 ## Giới thiệu
 Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa trong mạng LAN.
 
-[Mục tiêu](#mục-tiêu)
+#[Mục tiêu](#mục-tiêu)
 
-[Cấu trúc Dự Án](#cấu-trúc-dự-án)
+#[Cấu trúc Dự Án](#cấu-trúc-dự-án)
 
-[Cài Đặt pfSense](#1-cài-đặt-pfsense)
+1.[Cài Đặt pfSense](#1-cài-đặt-pfsense)
 
-[Cài Đặt Snort trên pfSense](#2-cài-đặt-snort-trên-pfsense)
+2.[Cài Đặt Snort trên pfSense](#2-cài-đặt-snort-trên-pfsense)
 
-[Cấu Hình Quy Tắc (Rules) Cảnh Báo cho Snort](#3-cấu-hình-quy-tắc-rules-cảnh-báo-cho-snort)
+3.[Cấu Hình Quy Tắc (Rules) Cảnh Báo cho Snort](#3-cấu-hình-quy-tắc-rules-cảnh-báo-cho-snort)
 
-[Kiểm Tra và Giám Sát Cảnh Báo Snort](#4-kiểm-tra-và-giám-sát-cảnh-báo-snort)
+4.[Kiểm Tra và Giám Sát Cảnh Báo Snort](#4-kiểm-tra-và-giám-sát-cảnh-báo-snort)
 
-[Cài Đặt ELK Stack](#5-cài-đặt-elk-stack)
+5.[Cài Đặt ELK Stack](#5-cài-đặt-elk-stack)
 
-- [Elasticsearch](#51-elasticsearch)
-- [Logstash](#52-logstash)
-- [Kibana](#53-kibana)
+- [Elasticsearch](#elasticsearch)
+- [Logstash](#logstash)
+- [Kibana](#kibana)
 
-[Cấu Hình pfSense để Chuyển Log Snort qua Syslog](#6-cấu-hình-pfsense-để-chuyển-log-snort-qua-syslog)
+6.[Cấu Hình pfSense để Chuyển Log Snort qua Syslog](#6-cấu-hình-pfsense-để-chuyển-log-snort-qua-syslog)
 
-[Kiểm Tra Log trong Kibana](#7-kiểm-tra-log-trong-kibana)
+7.[Kiểm Tra Log trong Kibana](#7-kiểm-tra-log-trong-kibana)
 
 ## Mục tiêu
 - **pfSense**: Triển khai tường lửa để bảo vệ mạng, cài đặt các quy tắc firewall và NAT.
@@ -88,7 +88,7 @@ Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng b�
 ###Xem log cảnh báo:
 - Đi tới `Status` > `System Logs` > `Snort` để xem log của các cảnh báo Snort.
 - Tại đây, bạn có thể kiểm tra các sự kiện mà Snort đã phát hiện và ghi lại, bao gồm thời gian, nguồn, và loại mối đe dọa.
-## 5 Cài đặt ELK Stack
+## 5. Cài đặt ELK Stack
 ### Elasticsearch
 Bước 1: Cài đặt Java
 - Elasticsearch cần Java để hoạt động. Cài đặt OpenJDK bằng lệnh sau:
@@ -246,13 +246,13 @@ Bước 3: Kiểm tra log Snort trong mục Discover
 Bước 4: Kiểm tra dữ liệu log:
 - Kibana sẽ tải và hiển thị các log Snort mới nhất.
 - Bạn có thể sử dụng bộ lọc thời gian ở góc trên bên phải để chọn khoảng thời gian mong muốn (ví dụ: 15 phút qua, 24 giờ qua).
-Bước 5: Tạo Dashboard để trực quan hóa log Snort
+### Tạo Dashboard để trực quan hóa log Snort
 - Vào mục `Dashboard`.
 - Từ menu bên trái, chọn `Dashboard` và nhấn `Create dashboard`.
-Bước 6: Thêm biểu đồ và bảng dữ liệu:
+Bước 1: Thêm biểu đồ và bảng dữ liệu:
 - Nhấn `Add` và chọn `Visualizations` hoặc `Saved Searches` dựa trên dữ liệu từ `index snort-logs-*`.
 - Bạn có thể tạo biểu đồ dạng thanh, biểu đồ tròn, hoặc bảng để trực quan hóa các sự kiện như cảnh báo xâm nhập, thời gian xảy ra sự kiện, v.v.
-Bước 7: Lưu Dashboard:
+Bước 2: Lưu Dashboard:
 - Sau khi hoàn thành, nhấn `Save` để lưu lại `dashboard` cho lần xem tiếp theo.
-Bước 8: Theo dõi log Snort theo thời gian thực
+Bước 3: Theo dõi log Snort theo thời gian thực
 - Kibana cung cấp khả năng cập nhật dữ liệu theo thời gian thực trong Discover và Dashboard. Bạn có thể bật tính năng tự động làm mới bằng cách chọn tần suất cập nhật ở góc trên bên phải (ví dụ: 10 giây, 1 phút) để giám sát log một cách liên tục.
