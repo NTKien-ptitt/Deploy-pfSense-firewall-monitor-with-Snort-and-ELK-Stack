@@ -33,13 +33,13 @@ Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng b�
 ### Chọn danh mục quy tắc (rule categories):
 - Trong `Snort` > `Global Settings`, tìm đến phần `Snort Rule Set Downloads and Updates`.
 - Đăng ký tài khoản tại Snort.org để có thể tải về các rule của Snort. Sau đó, nhập oinkmaster code vào mục này nếu được yêu cầu.
-- Chọn các nguồn tải quy tắc mà bạn muốn sử dụng như Snort VRT, Emerging Threats (ET), v.v.
+- Chọn các nguồn tải quy tắc mà muốn sử dụng như Snort VRT, Emerging Threats (ET), v.v.
 - Nhấn Update để tải về các quy tắc mới nhất từ các nguồn này.
 ### Cấu hình danh mục quy tắc cho giao diện cụ thể:
-- Quay lại `Snort` > `Interfaces` và chọn Edit (biểu tượng bút chì) trên giao diện bạn đã kích hoạt Snort (VD: WAN).
+- Quay lại `Snort` > `Interfaces` và chọn Edit (biểu tượng bút chì) trên giao diện đã kích hoạt Snort (VD: WAN).
 - Trong phần cấu hình của giao diện, chọn tab Categories.
 - Ta thấy danh sách các danh mục quy tắc (như policy, malware, trojan, web_client, v.v.) để bật/tắt tùy theo nhu cầu.
-- Tích chọn vào các danh mục quy tắc bạn muốn kích hoạt (VD: Policy Rules, Malware Rules, Trojan Rules).
+- Tích chọn vào các danh mục quy tắc muốn kích hoạt (VD: Policy Rules, Malware Rules, Trojan Rules).
 ### Cấu hình các quy tắc cụ thể:
 - Chuyển đến tab `Rules` trong cấu hình của giao diện.
 - Tại đây, bạn có thể thấy danh sách chi tiết các quy tắc trong mỗi danh mục đã tải.
