@@ -14,7 +14,7 @@ Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng b�
 - **ELK Stack**: Tích hợp log từ Snort, hiển thị dashboard phân tích.
 
 ## 1: Cài đặt pfSense
-Tải về và cài đặt pfSense:
++ Tải về và cài đặt pfSense.
 Tải ISO pfSense từ trang web chính thức.
 Tạo USB bootable và cài đặt pfSense lên phần cứng hoặc máy ảo.
 - Cấu hình cơ bản:
