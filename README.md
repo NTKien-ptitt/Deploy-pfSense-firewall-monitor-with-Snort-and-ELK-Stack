@@ -2,6 +2,43 @@
 
 ## Giới thiệu
 Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa trong mạng LAN.
+# Deploy pfSense Firewall, Monitor with Snort and ELK Stack
+
+## Giới thiệu
+[Giới thiệu](#giới-thiệu)
+
+## Mục tiêu
+[Mục tiêu](#mục-tiêu)
+
+## Cấu trúc Dự Án
+[Cấu trúc Dự Án](#cấu-trúc-dự-án)
+
+## 1. Cài Đặt pfSense
+[Cài Đặt pfSense](#1-cài-đặt-pfsense)
+
+## 2. Cài Đặt Snort trên pfSense
+[Cài Đặt Snort trên pfSense](#2-cài-đặt-snort-trên-pfsense)
+
+## 3. Cấu Hình Quy Tắc (Rules) Cảnh Báo cho Snort
+[Cấu Hình Quy Tắc (Rules) Cảnh Báo cho Snort](#3-cấu-hình-quy-tắc-rules-cảnh-báo-cho-snort)
+
+## 4. Kiểm Tra và Giám Sát Cảnh Báo Snort
+[Kiểm Tra và Giám Sát Cảnh Báo Snort](#4-kiểm-tra-và-giám-sát-cảnh-báo-snort)
+
+## 5. Cài Đặt ELK Stack
+[Cài Đặt ELK Stack](#5-cài-đặt-elk-stack)
+### 5.1 Elasticsearch
+[Elasticsearch](#51-elasticsearch)
+### 5.2 Logstash
+[Logstash](#52-logstash)
+### 5.3 Kibana
+[Kibana](#53-kibana)
+
+## 6. Cấu Hình pfSense để Chuyển Log Snort qua Syslog
+[Cấu Hình pfSense để Chuyển Log Snort qua Syslog](#6-cấu-hình-pfsense-để-chuyển-log-snort-qua-syslog)
+
+## 7. Kiểm Tra Log trong Kibana
+[Kiểm Tra Log trong Kibana](#7-kiểm-tra-log-trong-kibana)
 
 ## Mục tiêu
 - **pfSense**: Triển khai tường lửa để bảo vệ mạng, cài đặt các quy tắc firewall và NAT.
