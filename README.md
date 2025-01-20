@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa trong mạng LAN.
-![image](https://github.com/user-attachments/assets/df8a12b1-d024-475c-8e50-6e5bb16f936d)
+
 
 
 #[Mục tiêu](#mục-tiêu)
@@ -27,6 +27,9 @@ Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng b�
 
 7.[Kiểm Tra Log trong Kibana](#7-kiểm-tra-log-trong-kibana)
 
+![image](https://github.com/user-attachments/assets/df8a12b1-d024-475c-8e50-6e5bb16f936d)
+
+---
 ## Mục tiêu
 - **pfSense**: Triển khai tường lửa để bảo vệ mạng, cài đặt các quy tắc firewall và NAT.
 - **Snort**: Cài đặt và cấu hình để phát hiện các cuộc tấn công mạng, cung cấp cảnh báo.
