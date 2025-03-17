@@ -1,10 +1,10 @@
 # Triển khai tường lửa pfSense, giám sát bằng Snort và ELK Stack xây dựng hệ thống bảo mật toàn diện, kiểm soát quyền truy cập, phát hiện tấn công đến giám sát và phân tích hành vi mạng.
 
 ## Giới thiệu
-- Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa mạng trong không gian mạng LAN.
+- Đồ án này cấu hình theo mục đích triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa mạng trong không gian mạng LAN.
 
-
-
+# Mục lục
+---
 #[Mục tiêu](#mục-tiêu)
 
 #[Cấu trúc Dự Án](#cấu-trúc-dự-án)
