@@ -1,7 +1,7 @@
-# Deploy pfSense firewall, monitor with Snort and ELK Stack
+# Triển khai tường lửa pfSense, giám sát bằng Snort và ELK Stack xây dựng hệ thống bảo mật toàn diện, kiểm soát quyền truy cập, phát hiện tấn công đến giám sát và phân tích hành vi mạng.
 
 ## Giới thiệu
-Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa trong mạng LAN.
+- Dự án này triển khai tường lửa pfSense, giám sát an ninh mạng bằng Snort và ELK Stack (Elasticsearch, Logstash, Kibana) để phát hiện và phân tích các mối đe dọa mạng trong không gian mạng LAN.
 
 
 
